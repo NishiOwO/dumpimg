@@ -28,7 +28,9 @@ int main(int argc, char** argv){
 		}
 		printf("\n");
 	}
-	printf("}\n");
+	printf("};\n");
+	printf("int %s_width = %d;\n", prefix, w);
+	printf("int %s_height = %d;\n", prefix, h);
 	printf("#else\n");
 	printf("extern unsigned char %s_data[%d];\n", prefix, w * h * 4);
 	printf("extern int %s_width;\n", prefix);
